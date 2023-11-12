@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        height: 500px; /* Set a fixed height for demonstration */
+        overflow-y: scroll; /* Enable vertical scrolling */
+      }
+
+      .sticky1,
+      .sticky2 {
+        position: sticky;
+        top: 0;
+        background-color: #f1f1f1;
+        padding: 20px;
+        text-align: center;
+        font-size: 20px;
+        height: 200vh;
+      }
+
+      .content {
+        height: 200vh;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sticky1">Sticky Element 1</div>
+      <div class="content">
+        <!-- Your content goes here -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+      </div>
+      <div class="sticky2">Sticky Element 2</div>
+    </div>
+  </body>
+</html>
