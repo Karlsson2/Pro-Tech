@@ -23,11 +23,13 @@ body {
   flex-direction: column;
 }
 
-.about-us .title {
+.title {
+  color: var(--Whiter);
   font-size: 28px;
   font-weight: bold;
 }
-.about-us .text {
+.text {
+  color: var(--Whiter);
   font-size: 16px;
   font-weight: 400;
 }
@@ -137,4 +139,70 @@ body {
 .footer-privacy-toc {
   display: flex;
   justify-content: space-between;
+}
+
+.image-card {
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 80vh;
+  position: sticky;
+  top: 0;
+}
+.image-card-collection {
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 50vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 100px 24px;
+}
+
+.goggles {
+  background-image: url(images/goggles.jpg);
+}
+.watch {
+  background-image: url(images/watch.png);
+}
+.helmet {
+  background-image: url(images/helmet.jpg);
+}
+.backpack {
+  background-image: url(images/backpack.jpg);
+}
+.button-container {
+  display: flex;
+  padding: 80px 24px;
+  justify-content: flex-start;
+}
+.button-container-collection {
+  display: flex;
+  justify-content: flex-end;
+}
+.empty-button {
+  color: var(--Limeyellow);
+  border: 1px solid var(--Limeyellow);
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.empty-button img {
+  width: 20px;
+}
+
+.inverted-button {
+  background: var(--Limeyellow);
+  color: var(--Background-darkest);
+  padding: 10px;
+  display: flex;
+  width: 50%;
+  justify-self: flex-end;
+  justify-content: space-around;
+}
+.inverted-button img {
+  width: 20px;
 }
