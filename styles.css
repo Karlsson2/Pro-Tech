@@ -12,6 +12,7 @@
 }
 
 body {
+  background-color: var(--Background-darkest);
   width: 100vw;
   overflow-x: hidden;
   font-family: "Space Grotesk", sans-serif;
@@ -29,7 +30,9 @@ body {
   flex-direction: column;
   z-index: 2;
 }
-
+a {
+  text-decoration: none;
+}
 .progress-bar {
   margin-top: 15px;
   height: 5px;
@@ -117,6 +120,7 @@ body {
   font-weight: 400;
 }
 .hero-image {
+  margin: -177px 0px 0px 0px;
   padding: 86px 24px 24px 24px;
   height: 100vh;
   object-fit: cover;
@@ -228,7 +232,7 @@ body {
   background-size: cover;
   background-position: center;
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
   position: sticky;
   top: 0;
 }
@@ -263,6 +267,7 @@ body {
   justify-content: flex-start;
 }
 .button-container-collection {
+  gap: 10px;
   display: flex;
   justify-content: flex-end;
 }
@@ -272,9 +277,18 @@ body {
   padding: 10px;
   display: flex;
   justify-content: space-around;
+
+  background-color: transparent;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  color: var(--Limeyellow);
 }
 .empty-button img {
   width: 20px;
+}
+.empty-button:hover {
+  box-shadow: 0 0 10px 0 var(--Limeyellow) inset, 0 0 20px 2px var(--Limeyellow);
+  border: 3px solid var(--Limeyellow);
 }
 
 .inverted-button {
@@ -282,10 +296,16 @@ body {
   color: var(--Background-darkest);
   padding: 10px;
   display: flex;
-  width: 50%;
   justify-self: flex-end;
   justify-content: space-around;
 }
+
+.inverted-button a {
+  color: var(--Background-darkest);
+}
 .inverted-button img {
   width: 20px;
+}
+.inverted-button:hover {
+  box-shadow: 0 0 10px 0 var(--Limeyellow) inset, 0 0 20px 2px var(--Limeyellow);
 }
