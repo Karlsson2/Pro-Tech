@@ -1,102 +1,103 @@
 :root {
-    --Background-darkest : #23242C;
-    --Background-dark : #3B4554;
-    --Background-light: #636B78;
-    --Bluecloud: #99A6B9;
-    --Whiter: #E4E8EE;
-    --Limeyellow: #DBFF4B;
-   }
+  --Background-darkest: #23242c;
+  --Background-dark: #3b4554;
+  --Background-light: #636b78;
+  --Bluecloud: #99a6b9;
+  --Whiter: #e4e8ee;
+  --Limeyellow: #dbff4b;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+* {
+  box-sizing: border-box;
+}
 
-   body {
-    height: 200vh;
-    width: 100vw;
-    overflow-x: hidden;
-    font-family: "Space Grotesk", sans-serif;
-    margin: 0px;
-    padding: 0px;
-  }
-  
-  .sticky-nav {
-    position: sticky;
-    top: 0;
-    background-color: #333;
-    padding: 10px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .progress-bar {
-    margin-top: 15px;
-    height: 5px;
-    width: 0;
-    background-color: #DBFF4B;
-    transition: width 0.5s;
-  }
-  
-  .navigation {
-    box-sizing: border-box;
-    display: flex;
-    width: 366px;
-    padding: 0 24px;
-    padding-bottom: 10px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-  
-  .numbers {
-    display: flex;
-    gap: 70px;
-    width: 100%;
-    height: 16px;
-  }
-  
-  .numbers h2 {
-    color: #FFF;
-    leading-trim: both;
-    text-edge: cap;
-    font-family: Space Grotesk;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 23px;
-    white-space: nowrap;
-  }
-  
-  .pages {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    align-self: stretch;
-    width: 100%;
-    height: 11px;
-  }
-  
-  .pages h2 {
-    color: rgba(255, 255, 255, 0.50);
-    text-align: center;
-    leading-trim: both;
-    text-edge: cap;
-    font-family: Space Grotesk;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 23px;
-    white-space: nowrap;
-  }
-  
-  .headerlogo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  
+body {
+  height: 200vh;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  padding: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.progress-bar {
+  margin-top: 15px;
+  height: 5px;
+  width: 0;
+  background-color: #dbff4b;
+  transition: width 0.5s;
+}
+
+.navigation {
+  box-sizing: border-box;
+  display: flex;
+  width: 366px;
+  padding: 0 24px;
+  padding-bottom: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.numbers {
+  display: flex;
+  gap: 70px;
+  width: 100%;
+  height: 16px;
+}
+
+.numbers h2 {
+  color: #fff;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Space Grotesk;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px;
+  white-space: nowrap;
+}
+
+.pages {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  height: 11px;
+}
+
+.pages h2 {
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Space Grotesk;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  white-space: nowrap;
+}
+
+.headerlogo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .about-us {
   padding: 24px;
   background-color: var(--Background-darkest);
