@@ -32,6 +32,12 @@ body {
   font-weight: 400;
 }
 
+.product-name {
+  background-color: var(--Background-dark);
+  color: var(--Whiter);
+  padding: 24px;
+}
+
 .footer {
   background-color: var(--Background-darkest);
   color: var(--Whiter);
