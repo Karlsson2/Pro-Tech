@@ -31,7 +31,35 @@ body {
   font-size: 16px;
   font-weight: 400;
 }
+.hero-image {
+  padding: 86px 24px 24px 24px;
+  height: 100vh;
+  object-fit: cover;
+  background-image: linear-gradient(
+      180deg,
+      rgba(35, 36, 44, 0.6) 0%,
+      rgba(35, 36, 44, 0.6) 100%
+    ),
+    url(images/snowboard.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.arrow-title {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
+.main-title {
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--Whiter);
+}
 .product-name {
   background-color: var(--Background-dark);
   color: var(--Whiter);
