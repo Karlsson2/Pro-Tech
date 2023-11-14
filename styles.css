@@ -24,7 +24,6 @@ body {
   position: sticky;
   top: 0;
   background-color: #333;
-  padding: 10px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -45,8 +44,7 @@ a {
   box-sizing: border-box;
   display: flex;
   width: 366px;
-  padding: 0 24px;
-  padding-bottom: 10px;
+  padding: 0px 24px 24px 24px;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
@@ -98,17 +96,20 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 24px 24px 0px 24px;
 }
 
 .about-us {
-  padding: 24px;
+  padding: 36px 24px 75px 24px;
   background-color: var(--Background-darkest);
   color: var(--Whiter);
   display: flex;
   gap: 16px;
   flex-direction: column;
 }
-
+.limeyellow {
+  color: var(--Limeyellow);
+}
 .title {
   color: var(--Whiter);
   font-size: 28px;
@@ -124,10 +125,11 @@ a {
   padding: 86px 24px 24px 24px;
   height: 100vh;
   object-fit: cover;
+
   background-image: linear-gradient(
       180deg,
-      rgba(35, 36, 44, 0.6) 0%,
-      rgba(35, 36, 44, 0.6) 100%
+      rgba(35, 36, 44, 0) 20%,
+      rgba(35, 36, 44, 1) 100%
     ),
     url(images/snowboard.jpg);
   background-size: cover;
@@ -311,7 +313,6 @@ a {
   box-shadow: 0 0 10px 0 var(--Limeyellow) inset, 0 0 20px 2px var(--Limeyellow);
 }
 
-
 .community {
   display: flex;
   flex-direction: column;
@@ -324,17 +325,22 @@ a {
   justify-content: center;
   align-items: center;
   padding: 24px;
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: var(--Background-darkest);
+  color: var(--Whiter);
 }
 
 .communityimg {
   background-image: url(images/communityimage.png);
+  background-size: cover;
   height: 390px;
   align-self: stretch;
 }
 
 h2 .communityTitle {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 33px;
   text-align: center;
 }
 
@@ -350,8 +356,7 @@ h2 .communityTitle {
 }
 
 .communityButton p {
-  color: #000;
-  font-family: Space Grotesk;
+  color: var(--Background-darkest);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -366,13 +371,20 @@ h2 .communityTitle {
   padding: 24px;
   justify-content: center;
   align-items: start;
-  color: #FFF;
-  background-color: #000;
+  color: #fff;
+  background-color: var(--Background-darkest);
 }
 
 .signupform {
   display: flex;
   gap: 15px;
 }
-
-
+h1 {
+  margin: 0px;
+}
+.headerlogo img {
+  height: 55px;
+}
+.headerlogo h1 {
+  margin-right: 20px;
+}
