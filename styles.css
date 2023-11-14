@@ -306,6 +306,73 @@ a {
 .inverted-button img {
   width: 20px;
 }
+
 .inverted-button:hover {
   box-shadow: 0 0 10px 0 var(--Limeyellow) inset, 0 0 20px 2px var(--Limeyellow);
 }
+
+
+.community {
+  display: flex;
+  flex-direction: column;
+}
+
+.communitywrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.communityimg {
+  background-image: url(images/communityimage.png);
+  height: 390px;
+  align-self: stretch;
+}
+
+h2 .communityTitle {
+  text-align: center;
+}
+
+.communityButton {
+  display: flex;
+  background-color: var(--Limeyellow);
+  color: #000000;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  border-style: none;
+  padding: 8px;
+}
+
+.communityButton p {
+  color: #000;
+  font-family: Space Grotesk;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  margin: 0;
+}
+
+.signupWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  justify-content: center;
+  align-items: start;
+  color: #FFF;
+  background-color: #000;
+}
+
+.signupform {
+  display: flex;
+  gap: 15px;
+}
+
+
