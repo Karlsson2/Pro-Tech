@@ -98,6 +98,12 @@ a {
   justify-content: center;
   align-items: center;
   padding: 24px 24px 0px 24px;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+#headerlogo.hidden {
+  opacity: 0;
+  display: none; /* Göm elementet när opacitin är 0 */
 }
 
 .about-us {
