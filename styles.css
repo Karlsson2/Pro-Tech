@@ -394,3 +394,41 @@ h1 {
 .headerlogo h1 {
   margin-right: 20px;
 }
+
+@media (min-width: 1250px) {
+  
+  .about-us {
+    height:378px;
+    padding: 4px 72px;
+    background-color: var(--Background-darkest);
+    color: var(--Whiter);
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about-us .title {
+    color: var(--Off-White, #E4E8EE);
+    /* Desktop/H2 */
+    font-family: Space Grotesk;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px; /* 100% */
+  }
+
+  .about-us .limeyellow {
+    color: var(--Yellow, #DBFF4B);
+    /* Desktop/H2 */
+    font-family: Space Grotesk;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+  }
+
+  .about-us .text {
+    width:526px;
+  }
+}
