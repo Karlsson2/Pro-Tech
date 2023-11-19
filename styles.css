@@ -394,3 +394,14 @@ h1 {
 .headerlogo h1 {
   margin-right: 20px;
 }
+
+@media (min-width:1250px) {
+  .button-container {
+    position: absolute;
+    bottom: 37%;
+    right: 5%;
+    border: 1px solid var(--Yellow, #DBFF4B);
+    background: var(--Black, #23242C);
+    padding: 0;
+  }
+}
