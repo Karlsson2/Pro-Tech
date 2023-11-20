@@ -5,6 +5,7 @@
   --Bluecloud: #99a6b9;
   --Whiter: #e4e8ee;
   --Limeyellow: #dbff4b;
+  --swiper-theme-color: #e4e8ee !important;
 }
 
 * {
@@ -261,7 +262,7 @@ a {
   background-image: url(images/goggles.jpg);
 }
 .watch {
-  background-image: url(images/watch.png);
+  background-image: url(images/watch.jpg);
 }
 .helmet {
   background-image: url(images/helmet.jpg);
@@ -271,7 +272,8 @@ a {
 }
 .button-container {
   display: flex;
-  padding: 80px 24px;
+  flex-direction: column;
+  padding: 210px 24px;
   justify-content: flex-start;
 }
 .button-container-collection {
@@ -285,7 +287,7 @@ a {
   padding: 10px;
   display: flex;
   justify-content: space-around;
-
+  width: 50%;
   background-color: transparent;
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
@@ -395,8 +397,8 @@ h1 {
   margin-right: 20px;
 }
 
-@media (min-width:1250px) {
-  .button-container {
+@media (min-width: 1250px) {
+   .button-container {
     position: absolute;
     bottom: 37%;
     right: 5%;
@@ -404,4 +406,212 @@ h1 {
     background: var(--Black, #23242C);
     padding: 0;
   }
+  
+  .about-us {
+    height:378px;
+    padding: 4px 72px;
+    background-color: var(--Background-darkest);
+    color: var(--Whiter);
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about-us .title {
+    color: var(--Off-White, #E4E8EE);
+    /* Desktop/H2 */
+    font-family: Space Grotesk;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px; /* 100% */
+  }
+
+  .about-us .limeyellow {
+    color: var(--Yellow, #DBFF4B);
+    /* Desktop/H2 */
+    font-family: Space Grotesk;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+  }
+
+  .about-us .text {
+    width:526px;
+  }
+
+  .sticky-nav {
+    flex-direction: row;
+    display: flex;
+    height: 120px;
+    padding: 16px 72px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .navigation {
+    order: -1;
+  }
+
+  .headerlogo {
+    padding: 0;
+  }
+
+  .headerlogo img {
+    height: 96px;
+  }
+
+  .navigation {
+    width: 390px;
+  }
+
+  .numbers  {
+    gap: 77px;
+  }
+
+  .pages {
+    gap: 19px;
+  }
+
+  .hero-image {
+    flex-direction: column;
+    align-items: start;
+    gap: 150px;
+  }
+
+  .main-title {
+    margin-top: 194px;
+    margin-left: 72px;
+  }
+
+  .newsletterBanner {
+    display: flex;
+    width: 100%;
+    height: 72px;
+    padding: 0px 72px 0px 129px;
+    align-items: center;
+    gap: 17px;
+    flex-shrink: 0;
+    background: rgba(219, 255, 75, 0.25);
+  }
+
+  .newsletterBanner p {
+    display: flex;
+    height: 38px;
+    justify-content: center;
+    flex-shrink: 0;
+    color:#fff;
+  }
+
+  .newsletterBanner p a {
+    color: var(--Yellow, #DBFF4B);
+    font-family: IBM Plex Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    text-decoration-line: underline;
+  }
+}
+
+.swiper {
+  width: 100%;
+}
+.swiper-slide img {
+  width: 100%;
+  object-fit: cover;
+}
+.swiper-container {
+  padding: 20 0px;
+  width: 100%;
+}
+.product-carousel {
+  background-color: var(--Background-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  padding: 24px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.text-container,
+.text-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.swiper-slide img {
+  border-radius: 2px 2px 0px 0px;
+}
+.card-title {
+  color: var(--Whiter);
+}
+
+.link {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+}
+.link .empty-button {
+  width: auto;
+}
+.link .fa-plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px 0px 5px;
+}
+.button-container h2 {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 33px;
+  color: var(--Whiter);
+}
+.card-header {
+  position: relative;
+  background-image: url(images/watchstudio.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 300px;
+}
+.empty-card-heart {
+  color: var(--Whiter);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 26px;
+}
+.solid-card-heart {
+  color: var(--Limeyellow);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 26px;
+  transition: all ease-in-out 300ms;
+}
+.visible {
+  opacity: 1;
+}
+.not-visible {
+  opacity: 0;
+}
+
+.swiper-slide {
+  opacity: 0.5;
+  margin-top: 40px;
+  transition: opacity 0.3s, margin-top 0.3s!important;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+  margin-top: 0px;
 }
