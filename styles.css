@@ -397,6 +397,82 @@ h1 {
   margin-right: 20px;
 }
 
+@media (min-width: 1250px) {
+  .sticky-nav {
+    flex-direction: row;
+    display: flex;
+    height: 120px;
+    padding: 16px 72px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .navigation {
+    order: -1;
+  }
+
+  .headerlogo {
+    padding: 0;
+  }
+
+  .headerlogo img {
+    height: 96px;
+  }
+
+  .navigation {
+    width: 390px;
+  }
+
+  .numbers  {
+    gap: 77px;
+  }
+
+  .pages {
+    gap: 19px;
+  }
+
+  .hero-image {
+    flex-direction: column;
+    align-items: start;
+    gap: 150px;
+  }
+
+  .main-title {
+    margin-top: 194px;
+    margin-left: 72px;
+  }
+
+  .newsletterBanner {
+    display: flex;
+    width: 100%;
+    height: 72px;
+    padding: 0px 72px 0px 129px;
+    align-items: center;
+    gap: 17px;
+    flex-shrink: 0;
+    background: rgba(219, 255, 75, 0.25);
+  }
+
+  .newsletterBanner p {
+    display: flex;
+    height: 38px;
+    justify-content: center;
+    flex-shrink: 0;
+    color:#fff;
+  }
+
+  .newsletterBanner p a {
+    color: var(--Yellow, #DBFF4B);
+    font-family: IBM Plex Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    text-decoration-line: underline;
+  }
+}
+
 .swiper {
   width: 100%;
 }
@@ -495,5 +571,3 @@ h1 {
   opacity: 1;
   margin-top: 0px;
 }
-/* .swiper-slide {
-
