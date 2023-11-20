@@ -1,4 +1,5 @@
 :root {
+  --background-darkblack: #111115;
   --Background-darkest: #23242c;
   --Background-dark: #3b4554;
   --Background-light: #636b78;
@@ -108,7 +109,7 @@ a {
 
 .about-us {
   padding: 36px 24px 75px 24px;
-  background-color: var(--Background-darkest);
+  background-color: var(--background-darkblack);
   color: var(--Whiter);
   display: flex;
   gap: 16px;
@@ -127,6 +128,7 @@ a {
   font-size: 16px;
   font-weight: 400;
 }
+
 .hero-image {
   margin: -177px 0px 0px 0px;
   padding: 86px 24px 24px 24px;
@@ -135,8 +137,8 @@ a {
 
   background-image: linear-gradient(
       180deg,
-      rgba(35, 36, 44, 0) 20%,
-      rgba(35, 36, 44, 1) 100%
+      rgba(17, 17, 21, 0) 20%,
+      rgba(17, 17, 21, 1) 100%
     ),
     url(images/snowboard.jpg);
   background-size: cover;
@@ -165,7 +167,7 @@ a {
 }
 
 .footer {
-  background-color: var(--Background-darkest);
+  background-color: var(--Background-darkblack);
   color: var(--Whiter);
 }
 .footer-header {
@@ -173,6 +175,7 @@ a {
   background-color: var(--Background-light);
 }
 .footer-content {
+  background-color: var(--background-darkblack);
   padding: 24px 24px;
   display: flex;
   flex-direction: column;
@@ -397,126 +400,6 @@ h1 {
   margin-right: 20px;
 }
 
-@media (min-width: 1250px) {
-   .button-container {
-    position: absolute;
-    bottom: 37%;
-    right: 5%;
-    border: 1px solid var(--Yellow, #DBFF4B);
-    background: var(--Black, #23242C);
-    padding: 0;
-  }
-  
-  .about-us {
-    height:378px;
-    padding: 4px 72px;
-    background-color: var(--Background-darkest);
-    color: var(--Whiter);
-    display: flex;
-    gap: 16px;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .about-us .title {
-    color: var(--Off-White, #E4E8EE);
-    /* Desktop/H2 */
-    font-family: Space Grotesk;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 48px; /* 100% */
-  }
-
-  .about-us .limeyellow {
-    color: var(--Yellow, #DBFF4B);
-    /* Desktop/H2 */
-    font-family: Space Grotesk;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 48px;
-  }
-
-  .about-us .text {
-    width:526px;
-  }
-
-  .sticky-nav {
-    flex-direction: row;
-    display: flex;
-    height: 120px;
-    padding: 16px 72px;
-    justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
-  }
-
-  .navigation {
-    order: -1;
-  }
-
-  .headerlogo {
-    padding: 0;
-  }
-
-  .headerlogo img {
-    height: 96px;
-  }
-
-  .navigation {
-    width: 390px;
-  }
-
-  .numbers  {
-    gap: 77px;
-  }
-
-  .pages {
-    gap: 19px;
-  }
-
-  .hero-image {
-    flex-direction: column;
-    align-items: start;
-    gap: 150px;
-  }
-
-  .main-title {
-    margin-top: 194px;
-    margin-left: 72px;
-  }
-
-  .newsletterBanner {
-    display: flex;
-    width: 100%;
-    height: 72px;
-    padding: 0px 72px 0px 129px;
-    align-items: center;
-    gap: 17px;
-    flex-shrink: 0;
-    background: rgba(219, 255, 75, 0.25);
-  }
-
-  .newsletterBanner p {
-    display: flex;
-    height: 38px;
-    justify-content: center;
-    flex-shrink: 0;
-    color:#fff;
-  }
-
-  .newsletterBanner p a {
-    color: var(--Yellow, #DBFF4B);
-    font-family: IBM Plex Sans;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 28px;
-    text-decoration-line: underline;
-  }
-}
-
 .swiper {
   width: 100%;
 }
@@ -529,14 +412,25 @@ h1 {
   width: 100%;
 }
 .product-carousel {
-  background-color: var(--Background-dark);
+  background-color: var(--Background-darkest);
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 40px;
-  padding: 24px;
+  padding: 24px 0px 24px 0px;
   width: 100%;
   margin: 0 auto;
+  height: 100vh;
+}
+
+.product-title {
+  padding: 0px 24px;
+  color: var(--Whiter);
+  font-size: 32px;
+}
+
+.subtitle {
+  font-size: 16px;
 }
 
 .text-container,
@@ -608,10 +502,167 @@ h1 {
 .swiper-slide {
   opacity: 0.5;
   margin-top: 40px;
-  transition: opacity 0.3s, margin-top 0.3s!important;
+  transition: opacity 0.3s, margin-top 0.3s !important;
 }
 
 .swiper-slide-active {
   opacity: 1;
   margin-top: 0px;
+}
+
+@media (min-width: 480px) {
+  .product-carousel {
+    padding: 87px 0px 87px 24px !important;
+  }
+
+  .swiper-slide {
+    opacity: 1 !important;
+    margin-top: 0px !important;
+    transition: opacity 0.3s, margin-top 0.3s !important;
+  }
+
+  .swiper-slide-active {
+    opacity: 1 !important;
+    margin-top: 0px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .button-container {
+    position: absolute;
+    bottom: 37%;
+    right: 5%;
+    border: 1px solid var(--Yellow, #dbff4b);
+    background: var(--Black, #23242c);
+    padding: 0;
+  }
+
+  .about-us {
+    height: 378px;
+    padding: 4px 72px;
+    background-color: var(--background-darkblack);
+    color: var(--Whiter);
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about-us .title {
+    color: var(--Off-White, #e4e8ee);
+    /* Desktop/H2 */
+    font-family: Space Grotesk;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px; /* 100% */
+  }
+
+  .about-us .limeyellow {
+    color: var(--Yellow, #dbff4b);
+    /* Desktop/H2 */
+    font-family: Space Grotesk;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+  }
+
+  .about-us .text {
+    width: 526px;
+  }
+
+  .sticky-nav {
+    flex-direction: row;
+    display: flex;
+    height: 120px;
+    padding: 16px 72px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .navigation {
+    order: -1;
+  }
+
+  .headerlogo {
+    padding: 0;
+  }
+
+  .headerlogo img {
+    height: 96px;
+  }
+
+  .navigation {
+    width: 390px;
+  }
+
+  .numbers {
+    gap: 77px;
+  }
+
+  .pages {
+    gap: 19px;
+  }
+
+  .hero-image {
+    flex-direction: column;
+    align-items: start;
+    gap: 150px;
+  }
+
+  .main-title {
+    margin-top: 194px;
+    margin-left: 72px;
+  }
+
+  .newsletterBanner {
+    display: flex;
+    width: 100%;
+    height: 72px;
+    padding: 0px 72px 0px 129px;
+    align-items: center;
+    gap: 17px;
+    flex-shrink: 0;
+    background: rgba(219, 255, 75, 0.25);
+  }
+
+  .newsletterBanner p {
+    display: flex;
+    height: 38px;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #fff;
+  }
+
+  .newsletterBanner p a {
+    color: var(--Yellow, #dbff4b);
+    font-family: IBM Plex Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    text-decoration-line: underline;
+  }
+  .product-carousel {
+    padding: 150px 0px 87px 71px !important;
+  }
+  .product-carousel .title {
+    font-size: 60px;
+  }
+  .product-carousel .subtitle {
+    color: var(--Whiter);
+    font-size: 20px;
+  }
+  .swiper-slide {
+    opacity: 1 !important;
+    margin-top: 0px !important;
+    transition: opacity 0.3s, margin-top 0.3s !important;
+  }
+
+  .swiper-slide-active {
+    opacity: 1 !important;
+    margin-top: 0px !important;
+  }
 }

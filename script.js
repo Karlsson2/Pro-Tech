@@ -1,25 +1,29 @@
-
 const swiper = new Swiper(".swiper", {
   // Optional parameters
-  slidesPerView: 2,
-  centeredSlides: true,
-  spaceBetween: 5,
+  slidesPerView: 1.15,
+  spaceBetween: 15,
   direction: "horizontal",
   loop: true,
-
+  centeredSlides: true,
   // If we need pagination
-
   breakpoints: {
     // when window width is >= 320px
     // when window width is >= 480px
-    450: {
-      slidesPerView: 2,
+    480: {
+      slidesPerView: 2.2,
       spaceBetween: 30,
+      centeredSlides: false,
+    },
+    758: {
+      slidesPerView: 2.5,
+      spaceBetween: 40,
+      centeredSlides: false,
     },
     // when window width is >= 640px
-    1000: {
-      slidesPerView: 3,
+    980: {
+      slidesPerView: 2.5,
       spaceBetween: 40,
+      centeredSlides: false,
     },
   },
 });
@@ -38,86 +42,87 @@ heartsArray.forEach((elem) => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
+  let headerLogoVisible = true;
 
-    let headerLogoVisible = true;
+  window.addEventListener("scroll", function () {
+    // Räkna ut progress
+    const scrollHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+    const scrollTop = window.scrollY;
+    const progress = (scrollTop / scrollHeight) * 100;
 
-    window.addEventListener('scroll', function() {
-        // Räkna ut progress
-        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollTop = window.scrollY;
-        const progress = (scrollTop / scrollHeight) * 100;
+    // Uppdatera width på pregressbaren
+    document.getElementById("progress-bar").style.width = progress + "%";
 
-        // Uppdatera width på pregressbaren
-        document.getElementById('progress-bar').style.width = progress + '%';
+    // Hide navbar on scrolldown
+    if (progress > 2) {
+      // Smoothly hide the element
+      document.getElementById("headerlogo").style.maxHeight = "0";
+      document.getElementById("headerlogo").style.opacity = "0";
+      document.getElementById("headerlogo").style.overflow = "hidden";
+      document.getElementById("headerlogo").style.padding = "0";
+      document.getElementById("sticky-nav").style.backgroundColor =
+        "rgba(0, 0, 0, 0.24)";
+      document.getElementById("sticky-nav").style.backdropFilter = "blur(2px)";
+    } else {
+      // Smoothly show the element
+      document.getElementById("headerlogo").style.maxHeight = "79px"; // Set the maximum height to your desired value
+      document.getElementById("headerlogo").style.opacity = "1";
+      document.getElementById("headerlogo").style.overflow = "visible";
+      document.getElementById("sticky-nav").style.opacity = "1";
+    }
 
-        // Hide navbar on scrolldown
-        if (progress > 2) {
-            // Smoothly hide the element
-            document.getElementById('headerlogo').style.maxHeight = '0';
-            document.getElementById('headerlogo').style.opacity = '0';
-            document.getElementById('headerlogo').style.overflow = 'hidden';
-            document.getElementById('headerlogo').style.padding = '0';
-            document.getElementById('sticky-nav').style.backgroundColor = 'rgba(0, 0, 0, 0.24)';
-            document.getElementById('sticky-nav').style.backdropFilter = 'blur(2px)';
-        } else {
-            // Smoothly show the element
-            document.getElementById('headerlogo').style.maxHeight = '79px'; // Set the maximum height to your desired value
-            document.getElementById('headerlogo').style.opacity = '1';
-            document.getElementById('headerlogo').style.overflow = 'visible';
-            document.getElementById('sticky-nav').style.opacity = '1';
-        }
+    if (progress > 2 && window.innerWidth > 1250) {
+      document.getElementById("headerlogo").style.maxHeight = "0";
+      document.getElementById("headerlogo").style.opacity = "0";
+      document.getElementById("headerlogo").style.overflow = "hidden";
+      document.getElementById("sticky-nav").style.backgroundColor =
+        "rgba(0, 0, 0, 0.24)";
+      document.getElementById("sticky-nav").style.backdropFilter = "blur(2px)";
+    } else if (progress < 2 && this.window.innerWidth > 1250) {
+      // Smoothly show the element
+      document.getElementById("headerlogo").style.maxHeight = "79px"; // Set the maximum height to your desired value
+      document.getElementById("headerlogo").style.opacity = "1";
+      document.getElementById("headerlogo").style.overflow = "visible";
+      document.getElementById("headerlogo").style.padding = "0";
+      document.getElementById("sticky-nav").style.opacity = "1";
+    }
+    // Defined breakpoints för color & transition
+    const ranges = [
+      { start: 0, end: 20, color: "#DBFF4B" },
+      { start: 20, end: 45, color: "#DBFF4B" },
+      { start: 45, end: 74, color: "#DBFF4B" },
+      { start: 74, end: 100, color: "#DBFF4B" },
+    ];
 
-        if (progress > 2 && window.innerWidth > 1250) {
-            document.getElementById('headerlogo').style.maxHeight = '0';
-            document.getElementById('headerlogo').style.opacity = '0';
-            document.getElementById('headerlogo').style.overflow = 'hidden';
-            document.getElementById('sticky-nav').style.backgroundColor = 'rgba(0, 0, 0, 0.24)';
-            document.getElementById('sticky-nav').style.backdropFilter = 'blur(2px)';
+    // Add color and transition based on progress range
+    const letters = document.querySelectorAll(".pages h2");
+    const numbers = document.querySelectorAll(".numbers h2");
+    console.log(letters);
 
-        } else if (progress < 2 && this.window.innerWidth > 1250) {
-            // Smoothly show the element
-            document.getElementById('headerlogo').style.maxHeight = '79px'; // Set the maximum height to your desired value
-            document.getElementById('headerlogo').style.opacity = '1';
-            document.getElementById('headerlogo').style.overflow = 'visible';
-            document.getElementById('headerlogo').style.padding = '0';
-            document.getElementById('sticky-nav').style.opacity = '1';
-        }
-        // Defined breakpoints för color & transition
-        const ranges = [
-            { start: 0, end: 20, color: '#DBFF4B' },
-            { start: 20, end: 45, color: '#DBFF4B' },
-            { start: 45, end: 74, color: '#DBFF4B' },
-            { start: 74, end: 100, color: '#DBFF4B' },
-        ];
+    letters.forEach((letter, index) => {
+      const range = ranges[index];
 
-        // Add color and transition based on progress range
-        const letters = document.querySelectorAll('.pages h2');
-        const numbers = document.querySelectorAll('.numbers h2');
-        console.log(letters);
+      if (range && progress >= range.start && progress <= range.end) {
+        letter.style.transition = "color 0.3s";
+        letter.style.color = range.color;
+      } else {
+        letter.style.transition = "color 0.3s";
+        letter.style.color = "#FFF";
+      }
+    });
 
-        letters.forEach((letter, index) => {
-            const range = ranges[index];
+    numbers.forEach((number, index) => {
+      const range = ranges[index];
 
-            if (range && progress >= range.start && progress <= range.end) {
-                letter.style.transition = 'color 0.3s'; 
-                letter.style.color = range.color;
-            } else {
-                letter.style.transition = 'color 0.3s'; 
-                letter.style.color = '#FFF';
-            }
-        });
-
-        numbers.forEach((number, index) => {
-            const range = ranges[index];
-
-            if (range && progress >= range.start && progress <= range.end) {
-                number.style.transition = 'color 0.3s'; 
-                number.style.color = range.color;
-            } else {
-                number.style.transition = 'color 0.3s'; 
-                number.style.color = '#FFF';
-            }
-        });
+      if (range && progress >= range.start && progress <= range.end) {
+        number.style.transition = "color 0.3s";
+        number.style.color = range.color;
+      } else {
+        number.style.transition = "color 0.3s";
+        number.style.color = "#FFF";
+      }
     });
   });
+});
