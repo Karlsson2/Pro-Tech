@@ -18,6 +18,10 @@
       rel="stylesheet"
     />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+        <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>Pro-Tech</title>
   </head>
   <body>
@@ -69,6 +73,7 @@
     <div class="slidey-images">
       <div class="image-card goggles">
         <div class="button-container">
+          <h2>EvoAlpine Lens</h2>
           <a href="#">
             <div class="empty-button">
               To the product <img src="images/arrow-right.png" alt="" />
@@ -78,6 +83,7 @@
       </div>
       <div class="image-card watch">
         <div class="button-container">
+          <h2>Evo AltitudeConnect</h2>
           <a href="#">
             <div class="empty-button">
               To the product <img src="images/arrow-right.png" alt="" />
@@ -87,6 +93,7 @@
       </div>
       <div class="image-card helmet">
         <div class="button-container">
+          <h2>Evo AlpineProtect</h2>
           <a href="#">
             <div class="empty-button">
               To the product <img src="images/arrow-right.png" alt="" />
@@ -96,6 +103,7 @@
       </div>
       <div class="image-card backpack">
         <div class="button-container">
+          <h2>Evo AlpineTrek</h2>
           <a href="#">
             <div class="empty-button">
               To the product <img src="images/arrow-right.png" alt="" />
@@ -120,7 +128,88 @@
         </div>
       </div>
     </div>
-    <div class="product-carousel"></div>
+    <div class="product-carousel">
+      <div class="product-title title">
+        The <span class="limeyellow">EvoEdge 1.0</span> Collection.
+      </div>
+      <div class="swiper-container">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide card">
+              <div class="card-header">
+                <div class="link">
+                  <a href="#">
+                    <div class="empty-button">
+                      Add to cart <i class="fa-solid fa-plus"></i>
+                    </div>
+                  </a>
+                </div>
+                <div class="empty-card-heart card-heart visible">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="solid-card-heart card-heart not-visible">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide card">
+              <div class="card-header">
+                <div class="link">
+                  <a href="#">
+                    <div class="empty-button">
+                      Add to cart <i class="fa-solid fa-plus"></i>
+                    </div>
+                  </a>
+                </div>
+                <div class="empty-card-heart card-heart visible">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="solid-card-heart card-heart not-visible">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide card">
+              <div class="card-header">
+                <div class="link">
+                  <a href="#">
+                    <div class="empty-button">
+                      Add to cart <i class="fa-solid fa-plus"></i>
+                    </div>
+                  </a>
+                </div>
+                <div class="empty-card-heart card-heart visible">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="solid-card-heart card-heart not-visible">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide card">
+              <div class="card-header">
+                <div class="link">
+                  <a href="#">
+                    <div class="empty-button">
+                      Add to cart <i class="fa-solid fa-plus"></i>
+                    </div>
+                  </a>
+                </div>
+                <div class="empty-card-heart card-heart visible">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="solid-card-heart card-heart not-visible">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="all-products"></div>
     <div class="community">
@@ -169,16 +258,17 @@
       <div class="signupWrapper">
         <h2>Get the lastest!</h2>
         <div class="text">
-          Stay ahead with Protech. Sign up for our newsletter to unlock
-          exclusive offers, product updates, and insider insights.
-        </p>
-        <p>
-          Get access to VIP promotions, early product releases, and special
-          offers. Elevate your alpine experience with us.
-        </p>
-        <p>Adventure awaits!</p>
-      </div>
-      
+          <p>
+            Stay ahead with Protech. Sign up for our newsletter to unlock
+            exclusive offers, product updates, and insider insights.
+          </p>
+          <p>
+            Get access to VIP promotions, early product releases, and special
+            offers. Elevate your alpine experience with us.
+          </p>
+          <p>Adventure awaits!</p>
+        </div>
+
         <form class="signupform" action="#">
           <input type="text" placeholder="name.namesson@mail.com" />
           <button class="communityButton"><p>Join the club!</p></button>
@@ -225,6 +315,8 @@
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script src="script.js"></script>
   </body>
 </html>

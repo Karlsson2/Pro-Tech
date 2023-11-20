@@ -1,3 +1,43 @@
+
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  slidesPerView: 2,
+  centeredSlides: true,
+  spaceBetween: 5,
+  direction: "horizontal",
+  loop: true,
+
+  // If we need pagination
+
+  breakpoints: {
+    // when window width is >= 320px
+    // when window width is >= 480px
+    450: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    // when window width is >= 640px
+    1000: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+  },
+});
+
+let heartsArray = document.querySelectorAll(".card-heart");
+heartsArray.forEach((elem) => {
+  console.log("test");
+  elem.addEventListener("click", () => {
+    if (elem.classList.contains("visible")) {
+      elem.classList.remove("visible");
+      elem.classList.add("not-visible");
+    } else {
+      elem.classList.remove("not-visible");
+      elem.classList.add("visible");
+    }
+  });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
 
     let headerLogoVisible = true;
@@ -80,4 +120,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
+  });
