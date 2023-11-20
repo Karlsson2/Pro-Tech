@@ -160,11 +160,6 @@ a {
   font-weight: bold;
   color: var(--Whiter);
 }
-.product-name {
-  background-color: var(--Background-dark);
-  color: var(--Whiter);
-  padding: 24px;
-}
 
 .footer {
   background-color: var(--Background-darkblack);
@@ -404,7 +399,6 @@ h1 {
   width: 100%;
 }
 .swiper-slide img {
-  width: 100%;
   object-fit: cover;
 }
 .swiper-container {
@@ -510,11 +504,75 @@ h1 {
   margin-top: 0px;
 }
 
-@media (min-width: 480px) {
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.card-top {
+  position: relative;
+  background-color: var(--Background-light);
+  color: var(--Bluecloud);
+  font-family: "Space Grotesk";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 72px; /* 120% */
+  display: flex;
+  padding: 10px 0px 60px 10px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.top-text,
+.bottom-text {
+  opacity: 0.5;
+}
+
+.card-bottom {
+  display: flex;
+  padding: 48px 24px 24px 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 26px;
+  align-self: stretch;
+  background-color: var(--Background-dark);
+  color: var(--Whiter);
+}
+
+.product-name {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.product-price {
+  font-family: "IBM Plex Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+}
+.product-button {
+  color: var(--Limeyellow);
+  display: flex;
+  padding: 8px 12px;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--Limeyellow);
+}
+.floating-image {
+  position: absolute;
+  bottom: -58px;
+  left: 0;
+  height: 110%;
+  filter: drop-shadow(5px 5px 10px #000000);
+}
+@media (min-width: 400px) {
   .product-carousel {
     padding: 87px 0px 87px 24px !important;
   }
-
+}
+@media (min-width: 480px) {
   .swiper-slide {
     opacity: 1 !important;
     margin-top: 0px !important;
@@ -664,5 +722,19 @@ h1 {
   .swiper-slide-active {
     opacity: 1 !important;
     margin-top: 0px !important;
+  }
+  .card-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 60px;
+  }
+  .card-top {
+    width: 50%;
+  }
+  .card-bottom {
+    width: 50%;
+  }
+  .floating-image {
+    height: 100%;
   }
 }
