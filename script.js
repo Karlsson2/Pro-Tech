@@ -1,25 +1,29 @@
-
 const swiper = new Swiper(".swiper", {
   // Optional parameters
-  slidesPerView: 2,
-  centeredSlides: true,
-  spaceBetween: 5,
+  slidesPerView: 1.15,
+  spaceBetween: 15,
   direction: "horizontal",
   loop: true,
-
+  centeredSlides: true,
   // If we need pagination
-
   breakpoints: {
     // when window width is >= 320px
     // when window width is >= 480px
-    450: {
-      slidesPerView: 2,
+    480: {
+      slidesPerView: 2.2,
       spaceBetween: 30,
+      centeredSlides: false,
+    },
+    758: {
+      slidesPerView: 2.5,
+      spaceBetween: 40,
+      centeredSlides: false,
     },
     // when window width is >= 640px
-    1000: {
-      slidesPerView: 3,
+    980: {
+      slidesPerView: 2.5,
       spaceBetween: 40,
+      centeredSlides: false,
     },
   },
 });
@@ -99,26 +103,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
         letters.forEach((letter, index) => {
             const range = ranges[index];
+      if (range && progress >= range.start && progress <= range.end) {
+        letter.style.transition = "color 0.3s";
+        letter.style.color = range.color;
+      } else {
+        letter.style.transition = "color 0.3s";
+        letter.style.color = "#FFF";
+      }
+    });
 
-            if (range && progress >= range.start && progress <= range.end) {
-                letter.style.transition = 'color 0.3s'; 
-                letter.style.color = range.color;
-            } else {
-                letter.style.transition = 'color 0.3s'; 
-                letter.style.color = '#FFF';
-            }
-        });
-
-        numbers.forEach((number, index) => {
-            const range = ranges[index];
-
-            if (range && progress >= range.start && progress <= range.end) {
-                number.style.transition = 'color 0.3s'; 
-                number.style.color = range.color;
-            } else {
-                number.style.transition = 'color 0.3s'; 
-                number.style.color = '#FFF';
-            }
-        });
+    numbers.forEach((number, index) => {
+      const range = ranges[index];
+      if (range && progress >= range.start && progress <= range.end) {
+        number.style.transition = "color 0.3s";
+        number.style.color = range.color;
+      } else {
+        number.style.transition = "color 0.3s";
+        number.style.color = "#FFF";
+      }
     });
   });
+});
