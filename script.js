@@ -42,68 +42,67 @@ heartsArray.forEach((elem) => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  let headerLogoVisible = true;
+document.addEventListener('DOMContentLoaded', function() {
 
-  window.addEventListener("scroll", function () {
-    // Räkna ut progress
-    const scrollHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
-    const scrollTop = window.scrollY;
-    const progress = (scrollTop / scrollHeight) * 100;
+    let headerLogoVisible = true;
 
-    // Uppdatera width på pregressbaren
-    document.getElementById("progress-bar").style.width = progress + "%";
+    window.addEventListener('scroll', function() {
+        // Räkna ut progress
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollTop = window.scrollY;
+        const progress = (scrollTop / scrollHeight) * 100;
 
-    // Hide navbar on scrolldown
-    if (progress > 2) {
-      // Smoothly hide the element
-      document.getElementById("headerlogo").style.maxHeight = "0";
-      document.getElementById("headerlogo").style.opacity = "0";
-      document.getElementById("headerlogo").style.overflow = "hidden";
-      document.getElementById("headerlogo").style.padding = "0";
-      document.getElementById("sticky-nav").style.backgroundColor =
-        "rgba(0, 0, 0, 0.24)";
-      document.getElementById("sticky-nav").style.backdropFilter = "blur(2px)";
-    } else {
-      // Smoothly show the element
-      document.getElementById("headerlogo").style.maxHeight = "79px"; // Set the maximum height to your desired value
-      document.getElementById("headerlogo").style.opacity = "1";
-      document.getElementById("headerlogo").style.overflow = "visible";
-      document.getElementById("sticky-nav").style.opacity = "1";
-    }
+        // Uppdatera width på pregressbaren
+        document.getElementById('progress-bar').style.width = progress + '%';
 
-    if (progress > 2 && window.innerWidth > 1250) {
-      document.getElementById("headerlogo").style.maxHeight = "0";
-      document.getElementById("headerlogo").style.opacity = "0";
-      document.getElementById("headerlogo").style.overflow = "hidden";
-      document.getElementById("sticky-nav").style.backgroundColor =
-        "rgba(0, 0, 0, 0.24)";
-      document.getElementById("sticky-nav").style.backdropFilter = "blur(2px)";
-    } else if (progress < 2 && this.window.innerWidth > 1250) {
-      // Smoothly show the element
-      document.getElementById("headerlogo").style.maxHeight = "79px"; // Set the maximum height to your desired value
-      document.getElementById("headerlogo").style.opacity = "1";
-      document.getElementById("headerlogo").style.overflow = "visible";
-      document.getElementById("headerlogo").style.padding = "0";
-      document.getElementById("sticky-nav").style.opacity = "1";
-    }
-    // Defined breakpoints för color & transition
-    const ranges = [
-      { start: 0, end: 20, color: "#DBFF4B" },
-      { start: 20, end: 45, color: "#DBFF4B" },
-      { start: 45, end: 74, color: "#DBFF4B" },
-      { start: 74, end: 100, color: "#DBFF4B" },
-    ];
+        // Hide navbar on scrolldown
+        if (progress > 2) {
+            // Smoothly hide the element
+            document.getElementById('headerlogo').style.maxHeight = '0';
+            document.getElementById('headerlogo').style.opacity = '0';
+            document.getElementById('headerlogo').style.overflow = 'hidden';
+            document.getElementById('headerlogo').style.padding = '0px 0px 0px 0px';
+            document.getElementById('sticky-nav').style.backgroundColor = 'rgba(0, 0, 0, 0.24)';
+            document.getElementById('sticky-nav').style.backdropFilter = 'blur(2px)';
+        } else {
+            // Smoothly show the element
+            document.getElementById('headerlogo').style.maxHeight = '79px'; // Set the maximum height to your desired value
+            document.getElementById('headerlogo').style.opacity = '1';
+            document.getElementById('headerlogo').style.overflow = 'visible';
+            document.getElementById('sticky-nav').style.opacity = '1';
+            document.getElementById('headerlogo').style.padding = '24px 24px 0px 24px';
+        }
 
-    // Add color and transition based on progress range
-    const letters = document.querySelectorAll(".pages h2");
-    const numbers = document.querySelectorAll(".numbers h2");
-    console.log(letters);
+        if (progress > 2 && window.innerWidth > 1250) {
+            document.getElementById('headerlogo').style.maxHeight = '0';
+            document.getElementById('headerlogo').style.opacity = '0';
+            document.getElementById('headerlogo').style.overflow = 'hidden';
+            document.getElementById('sticky-nav').style.backgroundColor = 'rgba(0, 0, 0, 0.24)';
+            document.getElementById('sticky-nav').style.backdropFilter = 'blur(2px)';
 
-    letters.forEach((letter, index) => {
-      const range = ranges[index];
+        } else if (progress < 2 && this.window.innerWidth > 1250) {
+            // Smoothly show the element
+            document.getElementById('headerlogo').style.maxHeight = '79px'; // Set the maximum height to your desired value
+            document.getElementById('headerlogo').style.opacity = '1';
+            document.getElementById('headerlogo').style.overflow = 'visible';
+            document.getElementById('headerlogo').style.padding = '0';
+            document.getElementById('sticky-nav').style.opacity = '1';
+        }
+        // Defined breakpoints för color & transition
+        const ranges = [
+            { start: 0, end: 20, color: '#DBFF4B' },
+            { start: 20, end: 45, color: '#DBFF4B' },
+            { start: 45, end: 74, color: '#DBFF4B' },
+            { start: 74, end: 100, color: '#DBFF4B' },
+        ];
 
+        // Add color and transition based on progress range
+        const letters = document.querySelectorAll('.pages h2');
+        const numbers = document.querySelectorAll('.numbers h2');
+        console.log(letters);
+
+        letters.forEach((letter, index) => {
+            const range = ranges[index];
       if (range && progress >= range.start && progress <= range.end) {
         letter.style.transition = "color 0.3s";
         letter.style.color = range.color;
@@ -115,7 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     numbers.forEach((number, index) => {
       const range = ranges[index];
-
       if (range && progress >= range.start && progress <= range.end) {
         number.style.transition = "color 0.3s";
         number.style.color = range.color;
