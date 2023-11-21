@@ -41,10 +41,21 @@ a {
   transition: width 0.5s;
 }
 
+.newsletterBanner {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  padding: 8px 24px;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  background: rgba(219, 255, 75, 0.25);
+}
+
 .navigation {
   box-sizing: border-box;
   display: flex;
-  width: 366px;
+  width:100%;
   padding: 0px 24px 24px 24px;
   flex-direction: column;
   align-items: flex-start;
@@ -53,15 +64,13 @@ a {
 
 .numbers {
   display: flex;
-  gap: 70px;
+  gap: 76px;
   width: 100%;
   height: 16px;
 }
 
 .numbers h2 {
   color: #fff;
-  leading-trim: both;
-  text-edge: cap;
   font-family: Space Grotesk;
   font-size: 16px;
   font-style: normal;
@@ -72,7 +81,7 @@ a {
 
 .pages {
   display: flex;
-  gap: 12px;
+  gap: 18px;
   align-items: center;
   align-self: stretch;
   width: 100%;
@@ -82,8 +91,6 @@ a {
 .pages h2 {
   color: rgba(255, 255, 255, 0.5);
   text-align: center;
-  leading-trim: both;
-  text-edge: cap;
   font-family: Space Grotesk;
   font-size: 15px;
   font-style: normal;
@@ -129,7 +136,7 @@ a {
 }
 .hero-image {
   margin: -177px 0px 0px 0px;
-  padding: 86px 24px 24px 24px;
+  padding: 86px 0px 24px 0px;
   height: 100vh;
   object-fit: cover;
 
@@ -144,7 +151,34 @@ a {
   display: flex;
   align-items: center;
   position: relative;
+  flex-direction: column;
+  gap: 100px;
 }
+
+.newsletterBanner p {
+  display: inline-block;
+  gap: 8px;
+  flex: 1 0 0;
+  font-family: IBM Plex Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  height: 50px;
+  color:#fff;
+}
+
+.newsletterBanner p span {
+  color: var(--Yellow, #DBFF4B);
+  font-family: IBM Plex Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  text-decoration-line: underline;
+  height: 50px;
+}
+
 .arrow-title {
   position: absolute;
   bottom: 0;
@@ -154,10 +188,20 @@ a {
 }
 
 .main-title {
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-top: 200px;
+}
+
+.main-title h1 {
+  font-family: Space Grotesk;
   font-size: 60px;
-  font-weight: bold;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
   color: var(--Whiter);
 }
+
 .product-name {
   background-color: var(--Background-dark);
   color: var(--Whiter);
@@ -501,12 +545,16 @@ h1 {
   .newsletterBanner p {
     display: flex;
     height: 38px;
-    justify-content: center;
     flex-shrink: 0;
     color:#fff;
+    font-family: IBM Plex Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
   }
 
-  .newsletterBanner p a {
+  .newsletterBanner p span {
     color: var(--Yellow, #DBFF4B);
     font-family: IBM Plex Sans;
     font-size: 20px;
@@ -514,6 +562,7 @@ h1 {
     font-weight: 500;
     line-height: 28px;
     text-decoration-line: underline;
+    height: 50px;
   }
 }
 

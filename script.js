@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('headerlogo').style.maxHeight = '0';
             document.getElementById('headerlogo').style.opacity = '0';
             document.getElementById('headerlogo').style.overflow = 'hidden';
-            document.getElementById('headerlogo').style.padding = '0';
+            document.getElementById('headerlogo').style.padding = '0px 0px 0px 0px';
             document.getElementById('sticky-nav').style.backgroundColor = 'rgba(0, 0, 0, 0.24)';
             document.getElementById('sticky-nav').style.backdropFilter = 'blur(2px)';
         } else {
@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('headerlogo').style.opacity = '1';
             document.getElementById('headerlogo').style.overflow = 'visible';
             document.getElementById('sticky-nav').style.opacity = '1';
+            document.getElementById('headerlogo').style.padding = '24px 24px 0px 24px';
         }
 
         if (progress > 2 && window.innerWidth > 1250) {
