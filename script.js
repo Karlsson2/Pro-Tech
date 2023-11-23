@@ -9,8 +9,19 @@ const swiper = new Swiper(".swiper", {
   breakpoints: {
     // when window width is >= 320px
     // when window width is >= 480px
-    480: {
-      slidesPerView: 2.2,
+
+    400: {
+      slidesPerView: 1.3,
+      spaceBetween: 30,
+      centeredSlides: false,
+    },
+    450: {
+      slidesPerView: 1.7,
+      spaceBetween: 30,
+      centeredSlides: false,
+    },
+    550: {
+      slidesPerView: 2,
       spaceBetween: 30,
       centeredSlides: false,
     },
