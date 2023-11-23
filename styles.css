@@ -673,6 +673,27 @@ h1 {
 }
 
 @media (min-width: 992px) {
+  .image-card-collection {
+    gap: 15px;
+    width: 50vw;
+    align-items: flex-start;
+    height: 60vh;
+    padding: 100px 74px;
+  }
+  .image-card-collection .text {
+    font-family: "IBM Plex Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+  }
+  .image-card-collection .title {
+    font-family: "Space Grotesk";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px; /* 100% */
+  }
   .footer-logo img {
     height: 100px;
     width: 100px;
@@ -733,7 +754,7 @@ h1 {
     display: block;
     padding-top: 158px;
     padding-left: 71px;
-    font-size: 28px;
+    font-size: 48px;
     font-style: normal;
     font-weight: 700;
     line-height: 33px;
