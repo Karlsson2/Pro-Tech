@@ -323,13 +323,16 @@ a {
   display: flex;
   flex-direction: column;
 }
+.communityButton p {
+  text-wrap: nowrap;
+}
 
 .communitywrapper {
   display: flex;
   flex-direction: column;
   gap: 16px;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   padding: 24px;
   background-color: var(--Background-darkest);
   color: var(--Whiter);
@@ -350,7 +353,7 @@ h2 .communityTitle {
   font-style: normal;
   font-weight: 700;
   line-height: 33px;
-  text-align: center;
+  text-align: left;
 }
 
 .communityButton {
@@ -359,9 +362,10 @@ h2 .communityTitle {
   color: #000000;
   gap: 18px;
   align-items: center;
+  align-self: flex-start;
   justify-content: center;
   border-style: none;
-  padding: 8px;
+  padding: 9px;
 }
 
 .communityButton p {
@@ -389,7 +393,13 @@ h2 .communityTitle {
 
 .signupform {
   display: flex;
-  gap: 15px;
+  gap: 0px;
+  width: 100%;
+}
+.signupform input {
+  width: 100%;
+  height: 42px;
+  border: none;
 }
 h1 {
   margin: 0px;
@@ -753,7 +763,7 @@ h1 {
     flex-direction: row-reverse;
   }
   .signupWrapper {
-    padding: 24px 24px 24px 74px;
+    padding: 24px 24px 24px 64px;
     gap: 0px;
     width: 45%;
   }
@@ -772,6 +782,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: 28px; /* 140% */
+    text-align: right;
   }
   .signupimg {
     width: 58%;
@@ -782,9 +793,10 @@ h1 {
   }
 
   .communitywrapper {
-    padding: 24px 74px 24px 24px;
+    padding: 24px 64px 24px 24px;
     gap: 0px;
     width: 45%;
+    align-items: flex-start;
   }
   .communityTitle {
     margin: 0px;
@@ -801,9 +813,7 @@ h1 {
     font-weight: 400;
     line-height: 28px;
   }
-  .communitybutton {
-    align-self: flex-start;
-  }
+
   .communityimg {
     width: 58%;
     justify-content: center;
