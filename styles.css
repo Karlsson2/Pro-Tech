@@ -205,7 +205,6 @@ a {
 }
 
 .product-name {
-  background-color: var(--Background-dark);
   color: var(--Whiter);
 }
 
@@ -579,6 +578,22 @@ h1 {
 .card-wrapper {
   display: flex;
   flex-direction: column;
+}
+.card-wrapper-bottom {
+  color: var(--Whiter);
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  font-family: IBM Plex Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+.bulletpoint {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 .card-top {
   position: relative;
