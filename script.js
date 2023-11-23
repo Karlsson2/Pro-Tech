@@ -40,15 +40,15 @@ const swiper = new Swiper(".swiper", {
 });
 
 let heartsArray = document.querySelectorAll(".card-heart");
-heartsArray.forEach((elem) => {
+heartsArray.forEach((dropdownContent) => {
   console.log("test");
-  elem.addEventListener("click", () => {
-    if (elem.classList.contains("visible")) {
-      elem.classList.remove("visible");
-      elem.classList.add("not-visible");
+  dropdownContent.addEventListener("click", () => {
+    if (dropdownContent.classList.contains("visible")) {
+      dropdownContent.classList.remove("visible");
+      dropdownContent.classList.add("not-visible");
     } else {
-      elem.classList.remove("not-visible");
-      elem.classList.add("visible");
+      dropdownContent.classList.remove("not-visible");
+      dropdownContent.classList.add("visible");
     }
   });
 });
@@ -134,4 +134,20 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+});
+var footerHeader = document.getElementById("footer-header");
+var dropdownContent = document.getElementById("languageDropdown")
+var arrow = document.getElementById("dropdownArrow");
+footerHeader.addEventListener("click", () => {
+  if (dropdownContent.classList.contains("visible")) {
+    dropdownContent.classList.remove("visible");
+    dropdownContent.classList.add("not-visible");
+    arrow.classList.add("down");
+    arrow.classList.remove("up");
+  } else {
+    dropdownContent.classList.remove("not-visible");
+    dropdownContent.classList.add("visible");
+    arrow.classList.add("up");
+    arrow.classList.remove("down");
+  }
 });

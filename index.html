@@ -871,17 +871,17 @@
       </div>
     </div>
     <div class="footer">
-      <div class="footer-header dropdown">
-        <div class="option en-us dropbtn">
-          <img src="images/us-en-flag.png" alt="" />
-          <div class="language">US/EN</div>
-          <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+      <div class="footer-header dropdown" id="footer-header">
+        <div class="option en-us dropbtn" role="button" onclick="toggleDropdown()">
+          <img src="images/se-sv.png" alt="" />
+          <div class="language">SE/SV</div>
+          <div id="dropdownArrow" class="fa-solid fa-chevron-down dropdown-arrow down"></div>
         </div>
-        <div class="dropdown-content">
-          <a href="indexSE.html">
-            <div class="option se-sv">
-              <img src="images/se-sv.png" alt="" />
-              <div class="language">SE/SV</div>
+        <div class="dropdown-content not-visible" id="languageDropdown">
+          <a href="index.html">
+            <div class="option">
+              <img src="images/us-en-flag.png" alt="" />
+              <div class="language">US/EN</div>
             </div>
           </a>
         </div>
