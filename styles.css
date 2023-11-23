@@ -56,7 +56,7 @@ a {
 .navigation {
   box-sizing: border-box;
   display: flex;
-  width: 100%;
+  width: 390px;
   padding: 0px 24px 24px 24px;
   flex-direction: column;
   align-items: flex-start;
@@ -241,19 +241,6 @@ a {
 }
 .dropbtn {
   cursor: pointer;
-}
-.dropdown-content {
-  display: none;
-}
-.dropdown-arrow {
-  transition: transform 0.3s ease-in-out;
-}
-.dropdown:hover .dropdown-content {
-  width: 100%;
-  display: flex;
-}
-.dropdown:hover .dropdown-arrow {
-  transform: rotate(-90deg);
 }
 
 .footer-menu {
@@ -558,10 +545,18 @@ h1 {
   transition: all ease-in-out 300ms;
 }
 .visible {
-  opacity: 1;
+  display:block;
 }
 .not-visible {
-  opacity: 0;
+  display:none;
+}
+
+.up {
+  transform: rotate(-180deg);
+}
+
+.down {
+  
 }
 
 .swiper-slide {
@@ -654,6 +649,32 @@ h1 {
   height: 110%;
   filter: drop-shadow(5px 5px 10px #000000);
 }
+
+@media (max-width:380px) {
+  .numbers {
+    justify-content: space-evenly;
+    gap:0px;
+    font-size: 10px
+  }
+
+  .pages {
+    justify-content: space-evenly;
+    gap:0px;
+  }
+
+  .pages h2 {
+    font-size: 10px;
+  }
+
+  .numbers h2 {
+    font-size: 15px;
+  }
+
+  .navigation {
+    width: 100%;
+  }
+}
+
 @media (min-width: 400px) {
   .product-carousel {
     padding: 87px 0px 87px 24px !important;
