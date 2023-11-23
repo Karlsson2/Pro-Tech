@@ -56,7 +56,7 @@ a {
 .navigation {
   box-sizing: border-box;
   display: flex;
-  width:100%;
+  width: 100%;
   padding: 0px 24px 24px 24px;
   flex-direction: column;
   align-items: flex-start;
@@ -167,11 +167,11 @@ a {
   font-weight: 400;
   line-height: 23px;
   height: 50px;
-  color:#fff;
+  color: #fff;
 }
 
 .newsletterBanner p span {
-  color: var(--Yellow, #DBFF4B);
+  color: var(--Yellow, #dbff4b);
   font-family: IBM Plex Sans;
   font-size: 16px;
   font-style: normal;
@@ -205,9 +205,7 @@ a {
 }
 
 .product-name {
-  background-color: var(--Background-dark);
   color: var(--Whiter);
-  padding: 24px;
 }
 
 .footer {
@@ -577,6 +575,22 @@ h1 {
   display: flex;
   flex-direction: column;
 }
+.card-wrapper-bottom {
+  color: var(--Whiter);
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  font-family: IBM Plex Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+.bulletpoint {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
 .card-top {
   position: relative;
   background-color: var(--Background-light);
@@ -655,6 +669,9 @@ h1 {
 }
 
 @media (min-width: 992px) {
+  .card-wrapper-bottom {
+    display: flex;
+  }
   .button-container {
     position: absolute;
     bottom: 37%;
@@ -663,9 +680,9 @@ h1 {
     background: var(--Black, #23242c);
     padding: 0;
   }
-  
+
   .button-container h2 {
-    display:none;
+    display: none;
   }
 
   .producth2 {
@@ -680,7 +697,7 @@ h1 {
   }
 
   .empty-button {
-    width:auto;
+    width: auto;
   }
 
   .about-us {
@@ -779,7 +796,7 @@ h1 {
     display: flex;
     height: 38px;
     flex-shrink: 0;
-    color:#fff;
+    color: #fff;
     font-family: IBM Plex Sans;
     font-size: 20px;
     font-style: normal;
@@ -788,7 +805,7 @@ h1 {
   }
 
   .newsletterBanner p span {
-    color: var(--Yellow, #DBFF4B);
+    color: var(--Yellow, #dbff4b);
     font-family: IBM Plex Sans;
     font-size: 20px;
     font-style: normal;
