@@ -56,7 +56,7 @@ a {
 .navigation {
   box-sizing: border-box;
   display: flex;
-  width:100%;
+  width: 100%;
   padding: 0px 24px 24px 24px;
   flex-direction: column;
   align-items: flex-start;
@@ -167,11 +167,11 @@ a {
   font-weight: 400;
   line-height: 23px;
   height: 50px;
-  color:#fff;
+  color: #fff;
 }
 
 .newsletterBanner p span {
-  color: var(--Yellow, #DBFF4B);
+  color: var(--Yellow, #dbff4b);
   font-family: IBM Plex Sans;
   font-size: 16px;
   font-style: normal;
@@ -207,12 +207,12 @@ a {
 .product-name {
   background-color: var(--Background-dark);
   color: var(--Whiter);
-  padding: 24px;
 }
 
 .footer {
   background-color: var(--Background-darkblack);
   color: var(--Whiter);
+  font-family: "IBM Plex Sans";
 }
 .footer-header {
   padding: 0px 24px;
@@ -223,7 +223,7 @@ a {
   padding: 24px 24px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 40px;
 }
 .footer-header-language {
   background-color: var(--Background-light);
@@ -262,10 +262,10 @@ a {
   flex-direction: column;
   font-size: 20px;
   font-weight: 400;
-  gap: 16px;
+  gap: 32px;
 }
 .footer-social {
-  font-size: 4em;
+  font-size: 2.9em;
   display: flex;
   justify-content: space-between;
 }
@@ -320,6 +320,9 @@ a {
 }
 .backpack {
   background-image: url(images/backpack.jpg);
+}
+.hidden-mobile {
+  display: none;
 }
 .button-container {
   display: flex;
@@ -655,6 +658,49 @@ h1 {
 }
 
 @media (min-width: 992px) {
+  .footer-logo img {
+    height: 100px;
+    width: 100px;
+  }
+  .footer-copyright {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-content {
+    gap: 50px;
+    padding: 64px 24px 24px 24px;
+  }
+  .footer-header {
+    display: none;
+  }
+  .footer-menu {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 140% */
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+  }
+  .footer-social {
+    justify-content: center;
+    gap: 50px;
+  }
+  .footer-privacy-toc {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+  }
+  .hidden-mobile {
+    display: flex;
+  }
   .button-container {
     position: absolute;
     bottom: 37%;
@@ -663,9 +709,9 @@ h1 {
     background: var(--Black, #23242c);
     padding: 0;
   }
-  
+
   .button-container h2 {
-    display:none;
+    display: none;
   }
 
   .producth2 {
@@ -680,7 +726,7 @@ h1 {
   }
 
   .empty-button {
-    width:auto;
+    width: auto;
   }
 
   .about-us {
@@ -779,7 +825,7 @@ h1 {
     display: flex;
     height: 38px;
     flex-shrink: 0;
-    color:#fff;
+    color: #fff;
     font-family: IBM Plex Sans;
     font-size: 20px;
     font-style: normal;
@@ -788,7 +834,7 @@ h1 {
   }
 
   .newsletterBanner p span {
-    color: var(--Yellow, #DBFF4B);
+    color: var(--Yellow, #dbff4b);
     font-family: IBM Plex Sans;
     font-size: 20px;
     font-style: normal;
