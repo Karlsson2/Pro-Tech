@@ -11,6 +11,7 @@
 
 * {
   box-sizing: border-box;
+  border: solid 1px red;
 }
 
 body {
@@ -296,6 +297,7 @@ a {
   top: 0;
 }
 .image-card-collection {
+  gap: 10px;
   background-size: cover;
   background-position: center;
   width: 100vw;
@@ -305,7 +307,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 100px 24px;
+  padding: 50px 24px;
 }
 
 .goggles {
@@ -332,7 +334,7 @@ a {
 .button-container-collection {
   gap: 10px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 .empty-button {
   color: var(--Limeyellow);
@@ -340,7 +342,7 @@ a {
   padding: 10px;
   display: flex;
   justify-content: space-around;
-  width: 50%;
+  width: 180px;
   background-color: transparent;
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
