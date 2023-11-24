@@ -11,8 +11,6 @@
 
 * {
   box-sizing: border-box;
-  padding: 0px;
-  margin: 0px;
 }
 
 body {
@@ -139,7 +137,7 @@ a {
 
 .hero-image {
   margin: -177px 0px 0px 0px;
-  padding: 86px 0px 24px 0px;
+  padding: 50px 0px 24px 0px;
   height: 100vh;
   object-fit: cover;
 
@@ -155,7 +153,7 @@ a {
   align-items: center;
   position: relative;
   flex-direction: column;
-  gap: 100px;
+  gap: 5em;
 }
 
 .newsletterBanner p {
@@ -723,6 +721,9 @@ h1 {
 }
 
 @media (min-width: 992px) {
+  .card-wrapper-bottom {
+    display: flex !important;
+  }
   .darkest {
     background-color: var(--Background-darkest);
   }
@@ -829,6 +830,7 @@ h1 {
     font-weight: 700;
     line-height: 33px;
     color: var(--Whiter);
+    margin: 0px;
   }
 
   .empty-button {
@@ -905,10 +907,10 @@ h1 {
   }
 
   .hero-image {
-    padding: 86px 0px 24px 0px;
+    padding: 5x0px 0px 24px 0px;
     flex-direction: column;
     align-items: start;
-    gap: 150px;
+    gap: 5em;
   }
 
   .main-title {
