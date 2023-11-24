@@ -11,6 +11,8 @@
 
 * {
   box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
 }
 
 body {
@@ -45,7 +47,6 @@ a {
 .newsletterBanner {
   display: flex;
   width: 100%;
-  height: 50px;
   padding: 8px 24px;
   align-items: center;
   gap: 8px;
@@ -165,7 +166,7 @@ a {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 23px;
+
   height: 50px;
   color: #fff;
 }
@@ -196,7 +197,7 @@ a {
 }
 
 .main-title h1 {
-  font-family: Space Grotesk;
+  font-family: "Space Grotesk";
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
@@ -316,6 +317,7 @@ a {
   flex-direction: column;
   padding: 210px 24px;
   justify-content: flex-start;
+  gap: 10px;
 }
 .button-container-collection {
   gap: 10px;
@@ -376,7 +378,7 @@ a {
   gap: 16px;
   justify-content: center;
   align-items: left;
-  padding: 24px;
+  padding: 76px 24px;
   background-color: var(--Background-darkest);
   color: var(--Whiter);
 }
@@ -391,12 +393,13 @@ a {
   object-fit: cover;
 }
 
-h2 .communityTitle {
+.communityTitle {
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
   line-height: 33px;
   text-align: left;
+  margin: 0px;
 }
 
 .communityButton {
@@ -427,11 +430,16 @@ h2 .communityTitle {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 24px;
+  padding: 76px 24px;
   justify-content: center;
   align-items: start;
-  color: #fff;
+  color: var(--Whiter);
   background-color: var(--Background-darkest);
+}
+.signupWrapper h2 {
+  margin: 0px;
+  font-family: "Space Grotesk";
+  font-size: 28px;
 }
 
 .signupform {
@@ -651,6 +659,27 @@ h1 {
 }
 
 @media (max-width: 380px) {
+  .main-title h1 {
+    font-size: 42px;
+  }
+  .newsletterBanner {
+    height: auto;
+  }
+  .newsletterBanner p {
+    display: block;
+    gap: 8px;
+    flex: 0 0 1;
+    height: auto;
+    font-family: "IBM Plex Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    color: var(--Whiter);
+  }
+  .newsletterBanner p span {
+    font-size: 12px;
+  }
   .numbers {
     justify-content: space-evenly;
     gap: 0px;
@@ -964,9 +993,12 @@ h1 {
     flex-direction: row-reverse;
   }
   .signupWrapper {
+    display: flex;
     padding: 24px 24px 24px 64px;
-    gap: 0px;
+    gap: 32px;
     width: 45%;
+    justify-content: center;
+    text-align: right;
   }
   .signupWrapper h2 {
     margin: 0px;
@@ -975,6 +1007,7 @@ h1 {
     font-style: normal;
     font-weight: 700;
     line-height: 48px;
+    text-align: right;
   }
 
   .signupWrapper .text {
@@ -995,9 +1028,11 @@ h1 {
 
   .communitywrapper {
     padding: 24px 64px 24px 24px;
-    gap: 0px;
+    display: flex;
+    gap: 32px;
     width: 45%;
-    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
   }
   .communityTitle {
     margin: 0px;
