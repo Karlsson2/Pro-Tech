@@ -721,6 +721,13 @@ h1 {
 }
 
 @media (min-width: 992px) {
+  .about-us .text {
+    font-family: "IBM Plex Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+  }
   .card-wrapper-bottom {
     display: flex !important;
   }
