@@ -376,7 +376,7 @@ a {
   gap: 16px;
   justify-content: center;
   align-items: left;
-  padding: 24px;
+  padding: 76px 24px;
   background-color: var(--Background-darkest);
   color: var(--Whiter);
 }
@@ -391,12 +391,13 @@ a {
   object-fit: cover;
 }
 
-h2 .communityTitle {
+.communityTitle {
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
   line-height: 33px;
   text-align: left;
+  margin: 0px;
 }
 
 .communityButton {
@@ -427,11 +428,16 @@ h2 .communityTitle {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 24px;
+  padding: 76px 24px;
   justify-content: center;
   align-items: start;
   color: #fff;
   background-color: var(--Background-darkest);
+}
+.signupWrapper h2 {
+  margin: 0px;
+  font-family: "Space Grotesk";
+  font-size: 28px;
 }
 
 .signupform {
