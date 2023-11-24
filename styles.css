@@ -11,7 +11,6 @@
 
 * {
   box-sizing: border-box;
-  border: solid 1px red;
 }
 
 body {
@@ -547,10 +546,10 @@ h1 {
   transition: all ease-in-out 300ms;
 }
 .visible {
-  display:block;
+  display: block;
 }
 .not-visible {
-  display:none;
+  display: none;
 }
 
 .up {
@@ -558,7 +557,6 @@ h1 {
 }
 
 .down {
-  
 }
 
 .swiper-slide {
@@ -652,16 +650,16 @@ h1 {
   filter: drop-shadow(5px 5px 10px #000000);
 }
 
-@media (max-width:380px) {
+@media (max-width: 380px) {
   .numbers {
     justify-content: space-evenly;
-    gap:0px;
-    font-size: 10px
+    gap: 0px;
+    font-size: 10px;
   }
 
   .pages {
     justify-content: space-evenly;
-    gap:0px;
+    gap: 0px;
   }
 
   .pages h2 {
@@ -696,6 +694,26 @@ h1 {
 }
 
 @media (min-width: 992px) {
+  .darkest {
+    background-color: var(--Background-darkest);
+  }
+  .dropdown-content-desktop {
+    position: absolute;
+    bottom: -45px;
+    width: 100%;
+    background: var(--Background-darkest);
+    border-radius: 0px 0px 5px 5px;
+  }
+  .desktop-language {
+    position: relative;
+    border-radius: 5px 5px 0px 0px;
+  }
+  .desktop-language:hover {
+    cursor: pointer;
+  }
+  .option {
+    padding: 10px;
+  }
   .image-card-collection {
     gap: 15px;
     width: 50vw;
