@@ -872,10 +872,17 @@
     </div>
     <div class="footer">
       <div class="footer-header dropdown" id="footer-header">
-        <div class="option en-us dropbtn" role="button" onclick="toggleDropdown()">
+        <div
+          class="option en-us dropbtn"
+          role="button"
+          onclick="toggleDropdown()"
+        >
           <img src="images/se-sv.png" alt="" />
           <div class="language">SE/SV</div>
-          <div id="dropdownArrow" class="fa-solid fa-chevron-down dropdown-arrow down"></div>
+          <div
+            id="dropdownArrow"
+            class="fa-solid fa-chevron-down dropdown-arrow down"
+          ></div>
         </div>
         <div class="dropdown-content not-visible" id="languageDropdown">
           <a href="index.html">
@@ -904,9 +911,26 @@
           <a href="www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
         </div>
         <div class="footer-privacy-toc">
-          <div class="option hidden-mobile">
-            <img src="images/se-sv.png" alt="" />
-            <div class="language">SWE/SV</div>
+          <div class="desktop-language hidden-mobile" id="desktop-language">
+            <div class="option" role="button">
+              <img src="images/se-sv.png" alt="" />
+              <div class="language">SWE/SV</div>
+              <div
+                id="dropdown-arrow-desktop"
+                class="fa-solid fa-chevron-down dropdown-arrow-desktop down"
+              ></div>
+            </div>
+            <div
+              class="dropdown-content-desktop not-visible"
+              id="dropdown-content-desktop"
+            >
+              <a href="index.html">
+                <div class="option">
+                  <img src="images/us-en-flag.png" alt="" />
+                  <div class="language">US/EN</div>
+                </div>
+              </a>
+            </div>
           </div>
           <a href="#">Sitemap</a>
           <a href="#">Privacy</a>
