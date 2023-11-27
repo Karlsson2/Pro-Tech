@@ -103,10 +103,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     // Defined breakpoints för color & transition
     const ranges = [
-      { start: 0, end: 20, color: "#DBFF4B" },
-      { start: 20, end: 45, color: "#DBFF4B" },
-      { start: 45, end: 74, color: "#DBFF4B" },
-      { start: 74, end: 100, color: "#DBFF4B" },
+      { start: 0, end: 14, color: "#DBFF4B" },
+      { start: 14, end: 70, color: "#DBFF4B" },
+      { start: 70, end: 85, color: "#DBFF4B" },
+      { start: 85, end: 101, color: "#DBFF4B" },
     ];
 
     // Add color and transition based on progress range
