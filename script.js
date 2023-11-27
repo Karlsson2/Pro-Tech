@@ -5,6 +5,7 @@ const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   loop: true,
   centeredSlides: true,
+  grabCursor: true,
   // If we need pagination
   breakpoints: {
     // when window width is >= 320px

@@ -41,7 +41,9 @@ a {
   background-color: #dbff4b;
   transition: width 0.5s;
 }
-
+.newsletterBanner a {
+  color: var(--Limeyellow);
+}
 .newsletterBanner {
   display: flex;
   width: 100%;
@@ -412,6 +414,10 @@ a {
   border-style: none;
   padding: 9px;
 }
+.communityButton:hover {
+  box-shadow: 0 0 10px 0 var(--Limeyellow) inset, 0 0 20px 2px var(--Limeyellow);
+  cursor: pointer;
+}
 
 .communityButton p {
   color: var(--Background-darkest);
@@ -468,7 +474,7 @@ h1 {
   object-fit: cover;
 }
 .swiper-container {
-  padding: 20 0px;
+  padding: 20px 0px;
   width: 100%;
 }
 .product-carousel {
@@ -650,6 +656,11 @@ h1 {
   border: 1px solid var(--Limeyellow);
   background-color: var(--Background-darkest);
 }
+
+.product-button:hover {
+  box-shadow: 0 0 10px 0 var(--Limeyellow) inset, 0 0 20px 2px var(--Limeyellow);
+  border: 1px solid var(--Limeyellow);
+}
 .floating-image {
   position: absolute;
   bottom: -58px;
@@ -704,6 +715,11 @@ h1 {
 
   .navigation {
     width: 100%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .floating-image {
+    height: 82% !important;
   }
 }
 @media (min-width: 548px) and (max-width: 600px) {
