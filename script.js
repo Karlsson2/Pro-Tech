@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
       { start: 0, end: 20, color: "#DBFF4B" },
       { start: 20, end: 45, color: "#DBFF4B" },
       { start: 45, end: 74, color: "#DBFF4B" },
-      { start: 74, end: 100, color: "#DBFF4B" },
+      { start: 74, end: 101, color: "#DBFF4B" },
     ];
 
     // Add color and transition based on progress range
