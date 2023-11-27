@@ -142,31 +142,30 @@ a {
   padding: 50px 0px 24px 0px;
   height: 100vh;
   object-fit: cover;
-
   background-image: linear-gradient(
       180deg,
       rgba(17, 17, 21, 0) 20%,
       rgba(17, 17, 21, 1) 100%
     ),
-    url(images/snowboard.jpg);
+    url(images/snowboard.png);
   background-size: cover;
-  background-position: center;
+  background-position: 65% 61%;
   display: flex;
-  align-items: center;
   position: relative;
   flex-direction: column;
-  gap: 5em;
+  gap: 3em;
 }
 
 .newsletterBanner p {
   display: inline-block;
   gap: 8px;
   flex: 1 0 0;
-  font-family: IBM Plex Sans;
+  font-family: "IBM Plex Sans";
   font-size: 16px;
+  line-height: 23px;
   font-style: normal;
   font-weight: 400;
-
+  margin: 0px;
   height: 50px;
   color: #fff;
 }
@@ -298,16 +297,16 @@ a {
 }
 
 .goggles {
-  background-image: url(images/goggles.jpg);
+  background-image: url(images/goggles1.png);
 }
 .watch {
-  background-image: url(images/watch.jpg);
+  background-image: url(images/ClockHologram.png);
 }
 .helmet {
-  background-image: url(images/helmet.jpg);
+  background-image: url(images/helmet.png);
 }
 .backpack {
-  background-image: url(images/backpack.jpg);
+  background-image: url(images/LampShowcase.png);
 }
 .hidden-mobile {
   display: none;
@@ -660,8 +659,11 @@ h1 {
 }
 
 @media (max-width: 380px) {
+  .hero-image {
+    gap: 2.5em;
+  }
   .main-title h1 {
-    font-size: 42px;
+    font-size: 37px;
   }
   .newsletterBanner {
     height: auto;
@@ -704,7 +706,16 @@ h1 {
     width: 100%;
   }
 }
-
+@media (min-width: 548px) and (max-width: 600px) {
+  .hero-image {
+    gap: 5em;
+  }
+}
+@media (min-width: 600px) and (max-width: 991px) {
+  .hero-image {
+    gap: 9em;
+  }
+}
 @media (min-width: 400px) {
   .product-carousel {
     padding: 87px 0px 87px 24px !important;
@@ -724,6 +735,10 @@ h1 {
 }
 
 @media (min-width: 992px) {
+  .main-title h1 {
+    font-size: 72px;
+    line-height: 72px;
+  }
   .about-us .text {
     font-family: "IBM Plex Sans";
     font-size: 20px;
@@ -917,10 +932,10 @@ h1 {
   }
 
   .hero-image {
-    padding: 5x0px 0px 24px 0px;
+    padding: 50px 0px 24px 0px;
     flex-direction: column;
     align-items: start;
-    gap: 5em;
+    gap: 8em;
   }
 
   .main-title {
@@ -1021,10 +1036,12 @@ h1 {
     line-height: 42px;
     text-align: right;
   }
-
+  .signupWrapper .text p {
+  }
   .signupWrapper .text {
+    margin: 0px;
     font-family: "IBM Plex Sans";
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 28px; /* 140% */
@@ -1056,10 +1073,11 @@ h1 {
   }
   .communitywrapper p {
     font-family: "IBM Plex Sans";
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 28px;
+    margin: 0px;
   }
 
   .communityimg {
@@ -1075,7 +1093,7 @@ h1 {
   }
   .communityimg img {
     width: 100%;
-    height: 75%;
+    height: 80%;
     object-fit: cover;
   }
 }
