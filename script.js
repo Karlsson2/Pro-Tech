@@ -40,18 +40,34 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-let heartsArray = document.querySelectorAll(".card-heart");
-heartsArray.forEach((dropdownContent) => {
-  console.log("test");
-  dropdownContent.addEventListener("click", () => {
-    if (dropdownContent.classList.contains("visible")) {
-      dropdownContent.classList.remove("visible");
-      dropdownContent.classList.add("not-visible");
-    } else {
-      dropdownContent.classList.remove("not-visible");
-      dropdownContent.classList.add("visible");
-    }
-  });
+const popUp = new Popup({
+  id: "popup",
+  title: "Välkommen till oss!",
+  content: `
+  big-margin§Vi ser fram emot att hålla dig uppdaterad med det senaste från ProTech.
+  Vi ses i backarna i vinter!
+      `,
+  titleColor: "#dbff4b",
+  titleMargin: "4",
+  backgroundColor: "#23242c",
+  closeColor: "#dbff4b",
+  borderRadius: 0,
+  borderWidth: 5,
+  borderColor: "#dbff4b",
+  font: "IBM Plex Sans",
+  textColor: "#e4e8ee",
+  sideMargin: "5%",
+  css: `
+  /* optional .popup */
+  .popup-body:last-child {
+    margin-bottom: 16%!important;
+}`,
+});
+
+const form = document.getElementById("form");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  popUp.show();
 });
 
 document.addEventListener("DOMContentLoaded", function () {
