@@ -42,7 +42,7 @@ const swiper = new Swiper(".swiper", {
 
 const popUp = new Popup({
   id: "popup",
-  title: "Välkommen till oss!",
+  title: '<img src="images/Protech.png" alt=""><br/>Välkommen till oss!',
   content: `
   big-margin§Vi ser fram emot att hålla dig uppdaterad med det senaste från ProTech.
   Vi ses i backarna i vinter!
