@@ -308,6 +308,7 @@ a {
 }
 .backpack {
   background-image: url(images/LampShowcase.png);
+  background-position: 24%;
 }
 .hidden-mobile {
   display: none;
@@ -375,7 +376,7 @@ a {
 .communitywrapper {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 0px;
   justify-content: center;
   align-items: left;
   padding: 76px 24px;
@@ -416,6 +417,10 @@ a {
 .communityButton:hover {
   box-shadow: 0 0 10px 0 var(--Limeyellow) inset, 0 0 20px 2px var(--Limeyellow);
   cursor: pointer;
+}
+
+.extraMargin {
+  margin-top: 32px;
 }
 
 .communityButton p {
@@ -565,9 +570,6 @@ h1 {
 
 .up {
   transform: rotate(-180deg);
-}
-
-.down {
 }
 
 .swiper-slide {
@@ -1071,8 +1073,7 @@ h1 {
 
   .communitywrapper {
     padding: 24px 64px 24px 24px;
-    display: flex;
-    gap: 32px;
+    display: flex;  
     width: 45%;
     justify-content: center;
     text-align: left;
